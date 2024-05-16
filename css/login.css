@@ -1,0 +1,21 @@
+body{
+    background-color: black;
+    background-image: url("/img/otrofondo.gif");
+    background-size: cover;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.infoContenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    border: 2px solid black;
+    height: 24rem;
+    width: 24rem ;
+    border-radius: 3rem;
+}
