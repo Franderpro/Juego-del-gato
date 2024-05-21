@@ -25,18 +25,22 @@ function juegaCompu() {
        
         valor[turno].appendChild(gif);
           
-        cambiarjugador()
+        
         ganar("jerry")
         ganar("tom")
-        salir=true
+        
        
       } else {
         turno = Math.floor(Math.random() * 9);
         
         salir=true
       }
+     
     } 
-    while(salir)
+    
+    while(salir==9){
+        salir==false
+    }
 
     
         
