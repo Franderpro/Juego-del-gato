@@ -6,8 +6,6 @@ let jugador = document.getElementById("jugador");
 jugador.innerHTML= "juega jerry"
 
 document.getElementById("jugador").innerHTML="juega jerry";
-
-
 function juegaCompu() {
    
     turno = Math.floor(Math.random() * 9);
@@ -37,34 +35,44 @@ function ganar(personaje) {
     
     //revisa primera fila  
     if (valor[0].classList[1] === personaje && valor[1].classList[1] === personaje && valor[2].classList[1] === personaje) {      
+        limpiar()
         return true;
+        
+
     }
     // revisa segunda fila
     else if (valor[3].classList[1] === personaje && valor[4].classList[1] === personaje && valor[5].classList[1] === personaje) {       
+        limpiar()
         return true;
     }
     //revisa tercera fila
     else if (valor[6].classList[1] === personaje && valor[7].classList[1] === personaje && valor[8].classList[1] === personaje) {      
+        limpiar()
         return true;
     }
     //revisa primera columna
     else if (valor[0].classList[1] === personaje && valor[3].classList[1] === personaje && valor[6].classList[1] === personaje) {        
+        limpiar()
         return true;
     }
     //revisa segunda columna
     else if (valor[1].classList[1] === personaje && valor[4].classList[1] === personaje && valor[7].classList[1] === personaje) {       
+        limpiar()
         return true;
     }
     // revisa tercera columna
     else if (valor[2].classList[1] === personaje && valor[5].classList[1] === personaje && valor[8].classList[1] === personaje) { 
+        limpiar()
         return true;
     }
     // revisa primera diagonal
     else if (valor[0].classList[1] === personaje && valor[4].classList[1] === personaje && valor[8].classList[1] === personaje) {
+        limpiar()
         return true;
     }
     //revisa segunda linea
     else if (valor[2].classList[1] === personaje && valor[4].classList[1] === personaje && valor[6].classList[1] === personaje) {
+        limpiar()
         return true;
     }
 return false;
@@ -106,7 +114,14 @@ for (let index = 0; index < valor.length; index++) {
             if (ganar("tom")) {
                 alert("tom gano perdedor")
             }
-            
+           
         }  
     });
+}
+//recorre todos los espaacios y me los vacia
+function limpiar() {
+    for (let index = 0; index < valor.length; index++) {
+        valor[index].innerHTML = "";
+        
+    }
 }
