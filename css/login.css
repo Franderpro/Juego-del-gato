@@ -1,7 +1,8 @@
 body{
     background-color: black;
-    background-image: url("/img/otrofondo.gif");
-    background-size: cover;
+    background-image: url("/img/foto.jpeg");
+    width: 20rem;
+    height: 2rem;
 }
 h1{
     display: flex;

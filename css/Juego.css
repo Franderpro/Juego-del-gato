@@ -108,3 +108,25 @@ body{
     background-color: transparent;
 
 }
+.button1{
+    display: flex;
+    background-color: rgb(249, 246, 246);
+    color: rgb(7, 7, 7);
+    align-items: center;
+    padding: 1rem;
+    
+}
+.contenedor3{
+    background-color: black;
+    color: white;
+    margin-top: -2rem;
+    height: 24rem;
+    border: 1px solid white;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+.texto1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
