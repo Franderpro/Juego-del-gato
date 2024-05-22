@@ -113,10 +113,20 @@ body{
     background-color: rgb(249, 246, 246);
     color: rgb(7, 7, 7);
     align-items: center;
-    padding: 1rem;
+    padding: 0.5rem;
+}
+.button2{
+    display: flex;
+    background-color: rgb(249, 246, 246);
+    color: rgb(7, 7, 7);
+    align-items: center;
+    padding: 0.5rem;
     
 }
 .contenedor3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: black;
     color: white;
     margin-top: -2rem;
@@ -129,4 +139,5 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
