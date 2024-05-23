@@ -2,10 +2,22 @@ let i = 0
 let usuario = "jerry"
 let jerry = "./img/jerry.gif"
 let tom = "./img/tom.gif"
-let ganadas = 0;
+let ganadas=0;
+let ganadas2=0;
+let ganadas3=0;
 let jugador = document.getElementById("jugador");
 jugador.innerHTML = "juega jerry"
 document.getElementById("jugador").innerHTML = "juega jerry";
+let partidas = document.getElementById("partidas")
+let partidas2 = document.getElementById("partidas2")
+let partidas3 = document.getElementById("partidas3")
+let registroUser= [];
+let ganadortom= localStorage.getItem("ganadortom")
+partidas2.innerHTML = ganadortom;
+let ganadorJerry= localStorage.getItem("ganadorJerry")
+partidas.innerHTML = ganadorJerry;
+let empates= localStorage.getItem("empates")
+partidas3.innerHTML = empates;
 function juegaCompu() {
     turno = Math.floor(Math.random() * 9);
     salir = false;
@@ -91,6 +103,7 @@ function ganar(personaje) {
     }
     return false;
 }
+
 let valor = document.getElementsByClassName("gato")
 //for que recorre todos los espacion para asignarles una posicion
 for (let index = 0; index < valor.length; index++) {
@@ -115,33 +128,51 @@ for (let index = 0; index < valor.length; index++) {
             jugador.innerHTML = "juega jerry"
         }, 1000);
         if (ganar("jerry")) {
-            ganadas++
-            partidas.innerHTML = ganadas;
+            ganadas=Number(ganadorJerry)
+            ganadas++ 
+            
+            localStorage.setItem("ganadorJerry",ganadas)
             alert(" jerry gano perdedor")
+            setTimeout(() => {
+               window.location.reload()
+            }, 1000);
+                
             return;
         }
         if (i < 9) {
             console.log("hola");
             juegaCompu()
             if (ganar("tom")) {
+                ganadas=Number(ganadortom)
                 ganadas++
-                partidas2.innerHTML = ganadas;
+                localStorage.setItem("ganadortom",ganadas)
+               
                 alert("tom gano perdedor")
+                setTimeout(() => {
+                    window.location.reload()
+                 }, 1000);
             }
         }
         else{
+            ganadas=Number(empates)
             ganadas++
-            partidas3.innerHTML = ganadas;
+            localStorage.setItem("empates",ganadas)
             alert("empate")
+            setTimeout(() => {
+                window.location.reload()
+             }, 1000);
         }
     });
 }
 //recorre todos los espaacios y me los vacia
 function limpiar() {
-    for (let index = 0; index < valor.length; index++) {
-        valor[index].innerHTML = "";
-        valor[index].classList.remove("tom")
-        valor[index].classList.remove("jerry")
+    if ("ganadorJerry"!="" && "ganadortom"!="" && "empates"!="") {
+        localStorage.removeItem("ganadorJerry");
+        partidas.innerHTML=""
+        localStorage.removeItem("ganadortom");
+        partidas2.innerHTML=""
+        localStorage.removeItem("empates");
+        partidas3.innerHTML=""
     }
-    i = 0
+        
 }
