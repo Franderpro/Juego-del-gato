@@ -1,23 +1,17 @@
 body{
     background-color: black;
-    background-image: url("/img/otrofondo.gif");
+    background-image: url("/img/fondo\ final3.jpg");
+    width: 20rem;
+    height: 2rem;
     background-size: cover;
 }
 h1{
-    display: flex;
-    justify-content: center;
-    font-size: 5rem;
     color: rgb(213, 9, 9);
-    font: oblique bold 5rem cursive;
-   
-    
+    font: oblique bold 4rem cursive;
 }
 h2{
-    display: flex;
-    justify-content: center;
     color: rgb(213, 9, 9);
-    font-size: 4rem;
-    font: oblique bold 5rem cursive;
+    font: oblique bold 2rem cursive;
     
 
 }
@@ -38,7 +32,7 @@ label{
     height: 4rem;
     width: 20rem;
     margin-top: 12rem;
-    margin-left: 40rem;
+    
 }
 .infoContenedor{
     display: flex;

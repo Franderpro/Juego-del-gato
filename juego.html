@@ -11,12 +11,14 @@
 </head>
 
 <body>
-    
+    <h1 class="jugador" id="jugador"></h1>
+    <h1 id="jugador2"></h1>
+
     <div class="contenedor2">
         <div class="contenedor">
             <div id="gato1" class="gato"></div>
             <div id="gato2" class="gato"></div>
-            <div id="gato3"  class="gato"></div>
+            <div id="gato3" class="gato"></div>
             <div id="gato4" class="gato"></div>
             <div id="gato5" class="gato"></div>
             <div id="gato6" class="gato"></div>
@@ -24,7 +26,24 @@
             <div id="gato8" class="gato"></div>
             <div id="gato9" class="gato"></div>
         </div>
+        <div class="contenedor3">
+            <img class="contenedorIMG" src="img/contenedor2.png" alt="">
+            <h4>Partidas Jugadas</h1>
+            <label class="texto1" for="">Partidas Ganadas</label>
+            <img class="jerry2"  src="img/jerry contenedor.png" alt="">
+             <p  class="partidas" id="partidas"></p>
+            <label class="texto1" for="">partidas Empatadas</label>
+            <img class="empates2" src="img/empates.png" alt="">
+            <p class="partidas" id="partidas3"></p>
+            <label class="texto1" for="">Partidas Perdidas</label>
+            <img class="tom2" src="img/tom contenedor.png" alt="">
+            <p class="partidas" id="partidas2"></p>
+            <button class="button2" type="button" onclick=limpiar()>salir</button>
+            <input class="button1" type="button" value="Reiniciar Todas las partidas" onclick="location.reload()" />
+        </div>
+
     </div>
+
     <script src="java/juego.js"></script>
 </body>
 
