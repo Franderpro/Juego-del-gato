@@ -2,6 +2,14 @@ body{
     background-image: url(/img/R.jpg);
     background-size: cover;
 }
+.jugador{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 50%);
+    color: white;
+    margin-top: 0.5rem;
+    
+}
 .contenedor {
     display: grid;
     grid-template-columns: repeat(3, 155px );
@@ -11,6 +19,33 @@ body{
     background-color: rgba(255, 255, 255, 50%);
     height: 24rem;
 
+}
+.contenedorIMG{
+    width: 7rem;
+   margin-left: 30%;
+   
+   
+}
+.partidas{
+    margin-left: 49%;
+}
+.jerry2{
+    width: 3rem;
+    position: absolute;
+    margin-left: 2%;
+    margin-top: 1%;
+}
+.tom2{
+    margin-top: 20rem;
+    margin-left: 2%;
+    width: 3.5rem;
+    position: absolute;
+}
+.empates2{
+    margin-top: 11rem;
+    margin-left: 2%;
+    width: 3rem;
+    position: absolute;
 }
 .contenedor2{
     display: flex;
@@ -113,31 +148,39 @@ body{
     background-color: rgb(249, 246, 246);
     color: rgb(7, 7, 7);
     align-items: center;
-    padding: 0.5rem;
+    padding: 0.3rem;
 }
 .button2{
     display: flex;
     background-color: rgb(249, 246, 246);
     color: rgb(7, 7, 7);
     align-items: center;
-    padding: 0.5rem;
+    padding: 0.3rem;
     
 }
 .contenedor3{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 60%);
     color: white;
     margin-top: -2rem;
-    height: 24rem;
+    height: 31rem;
     border: 1px solid white;
     border-radius: 2rem;
-    padding: 1rem;
+    padding: 1.9rem;
+    margin-left: 3rem;
+    width: 30rem;
 }
 .texto1{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0.5rem;
+    
+}
+h4{
+    font-size: 1.5rem;
+    margin-left: 3rem;
     
 }

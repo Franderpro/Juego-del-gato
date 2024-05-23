@@ -3,8 +3,6 @@ let usuario = "jerry"
 let jerry = "./img/jerry.gif"
 let tom = "./img/tom.gif"
 let ganadas=0;
-let ganadas2=0;
-let ganadas3=0;
 let jugador = document.getElementById("jugador");
 jugador.innerHTML = "juega jerry"
 document.getElementById("jugador").innerHTML = "juega jerry";
@@ -122,7 +120,6 @@ for (let index = 0; index < valor.length; index++) {
         }
         gif.style.marginLeft = "3rem"
         gif.style.height = "80px";
-        console.log("JERRY ADENTRO")
         valor[index].appendChild(gif);
         setTimeout(() => {
             jugador.innerHTML = "juega jerry"
@@ -172,7 +169,9 @@ function limpiar() {
         localStorage.removeItem("ganadortom");
         partidas2.innerHTML=""
         localStorage.removeItem("empates");
+        //localStorage.removeItem("registro"); 
         partidas3.innerHTML=""
+        window.location.href = "login.html"
     }
         
 }

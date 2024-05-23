@@ -3,7 +3,7 @@ let correo = document.getElementById("correo")
 let password = document.getElementById("password")
 registroUser = [];
 function registrar() {
-    registroUser = JSON.parse(localStorage.getItem("registro" + nombre.value)) || [];
+    registroUser = JSON.parse(localStorage.getItem("registro")) || [];
     encontrado = registroUser.find(usuario => usuario.nombre == nombre.value && usuario.correo == correo.value && usuario.password==password.value)
     if (encontrado != undefined) {
         alert("este usuario ya esta registrado")
@@ -17,7 +17,7 @@ function registrar() {
         }
         registroUser.push(data)
 
-        localStorage.setItem(("registro" + nombre.value), JSON.stringify(registroUser))
+        localStorage.setItem(("registro"), JSON.stringify(registroUser))
         window.location.href = "login.html"
     }
 
