@@ -1,7 +1,7 @@
 let nombre= document.getElementById("nombre")
 let correo= document.getElementById("correo")
 let password= document.getElementById("password")
-
+// let musica= document.getElementById("musicaid")
 
 registroUser=JSON.parse(localStorage.getItem("registro")) || [];
 function inicio() {
@@ -25,3 +25,13 @@ function inicio() {
 
 
 }
+// function musica(id) {
+//     id.play()
+// }
+// musicafunction.addEventListener("load",function(){
+
+// musica.play
+
+
+
+// })
