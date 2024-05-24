@@ -33,17 +33,17 @@ body{
     width: 3rem;
     position: absolute;
     margin-left: 2%;
-    margin-top: 1%;
+    margin-top: 2%;
 }
 .tom2{
-    margin-top: 20rem;
+    margin-top: 20.1rem;
     margin-left: 2%;
     width: 3.5rem;
     position: absolute;
 }
 .empates2{
     margin-top: 11rem;
-    margin-left: 2%;
+    margin-left: 3%;
     width: 3rem;
     position: absolute;
 }
@@ -183,4 +183,8 @@ h4{
     font-size: 1.5rem;
     margin-left: 3rem;
     
+}
+audio{
+    opacity: 0.5;
+    color: white;
 }

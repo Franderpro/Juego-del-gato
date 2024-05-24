@@ -10,14 +10,16 @@ let partidas = document.getElementById("partidas")
 let partidas2 = document.getElementById("partidas2")
 let partidas3 = document.getElementById("partidas3")
 let registroUser= [];
+//se obtiene los datos de las partidas ganadas
 let ganadortom= localStorage.getItem("ganadortom")
 partidas2.innerHTML = ganadortom;
 let ganadorJerry= localStorage.getItem("ganadorJerry")
 partidas.innerHTML = ganadorJerry;
 let empates= localStorage.getItem("empates")
 partidas3.innerHTML = empates;
+//esta funcion hace que la compu juege
 function juegaCompu() {
-    turno = Math.floor(Math.random() * 9);
+    turno = Math.floor(Math.random() * 9);// genera turnos aleatorios
     salir = false;
     do {
         if (valor[turno].childElementCount == 0) {
@@ -38,6 +40,7 @@ function juegaCompu() {
     }
     while (!salir);
 }
+// valida los ganes
 function ganar(personaje) {
     //revisa primera fila  
     if (valor[0].classList[1] === personaje && valor[1].classList[1] === personaje && valor[2].classList[1] === personaje) {
@@ -110,6 +113,7 @@ for (let index = 0; index < valor.length; index++) {
         let jugar = true
         if (valor[index].childElementCount == 0) {
             gif = document.createElement("img")
+            
             if (usuario == "jerry") {
                 gif.src = "./img/jerry.gif";
                 valor[index].classList.add("jerry")
